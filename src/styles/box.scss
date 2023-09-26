@@ -1,0 +1,18 @@
+@import "variables";
+@import "mixins";
+
+.box {
+  @include flex($justify: flex-start);
+  height: 64px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: $primary-color;
+
+  p {
+    font-size: 24px;
+    font-weight: 700;
+    color: $background-color;
+    margin-right: auto;
+    user-select: none;
+  }
+}
