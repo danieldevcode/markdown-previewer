@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react";
 import Editor from "./components/Editor";
-import "./styles/app.scss";
 import Split from "react-split-grid";
 import Previewer from "./components/Previewer";
-import text from "./defaultMarkdown";
+import defaultText from "./defaultMarkdown";
+import "./styles/app.scss";
 
 function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [split, setSplit] = useState({});
-  const [code, setCode] = useState(text);
+  const [grid, setGrid] = useState({});
+  const [code, setCode] = useState(defaultText);
 
   useEffect(function onLoad() {
-    setWindowWidth(window.innerWidth);
     window.addEventListener("resize", () => {
       setWindowWidth(window.innerWidth);
     });
@@ -24,7 +23,8 @@ function App() {
 
   useEffect(
     function setGridLayout() {
-      setSplit(() => {
+      console.log(windowWidth);
+      setGrid(() => {
         return windowWidth > 800
           ? {
               direction: "column",
@@ -44,13 +44,13 @@ function App() {
       minSize={0}
       render={({ getGridProps, getGutterProps }) => (
         <div
-          className={`main-container grid grid-${split.direction}`}
+          className={`main-container grid grid-${grid.direction}`}
           {...getGridProps()}
         >
           <Editor code={code} setCode={setCode} />
           <div
-            className={`gutter ${split.class}`}
-            {...getGutterProps(split.direction, 1)}
+            className={`gutter ${grid.class}`}
+            {...getGutterProps(grid.direction, 1)}
           />
           <Previewer code={code} />
         </div>

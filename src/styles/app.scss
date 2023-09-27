@@ -1,6 +1,5 @@
 @use "base";
 @use "split-grid";
-@import "mediaquery";
 @import "variables";
 @import "mixins";
 
@@ -13,19 +12,5 @@ section {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  overflow-y: scroll;
-}
-
-textarea {
-  outline: none;
-  border: none;
-  resize: none;
-  height: 100%;
-  background-color: transparent;
-
-
-  font-size: 16px;
-  line-height: 27px;
-  font-family: $primary-font;
-  color: $primary-color;
+  overflow: hidden;
 }

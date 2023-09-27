@@ -1,11 +1,18 @@
 import React, { useEffect, useRef } from "react";
-import Box from "./Box";
+import Header from "./Header";
 import "../styles/previewer.scss";
 import { marked } from "marked";
+import hljs from "highlight.js";
+import "highlight.js/styles/tokyo-night-dark.css";
+import DOMPurify from "dompurify";
 
 function Previewer({ code }) {
   const previewerRef = useRef(null);
 
+  marked.use({
+    gfm: true,
+    breaks: true,
+  });
   useEffect(function onLoad() {
     marked.use({
       gfm: true,
@@ -15,19 +22,21 @@ function Previewer({ code }) {
 
   useEffect(
     function renderPreview() {
-      previewerRef.current.innerHTML = marked.parse(code);
+      previewerRef.current.innerHTML = DOMPurify.sanitize(marked.parse(code));
+      document.querySelectorAll("code").forEach((code) => {
+        hljs.highlightElement(code);
+      });
     },
     [code]
   );
 
   return (
     <section className="previewer-section">
-      <Box text="Previewer" />
+      <Header text="Previewer" />
       <section
         id="preview"
         ref={previewerRef}
         className="previewer"
-        readOnly
       ></section>
     </section>
   );

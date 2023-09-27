@@ -1,27 +1,29 @@
 const text = `
 # Markdown previewer
-## Build with React
-### Link:
-[My portfolio](https://danielcortes.tech)
+## 📄 About
+Type in the editor to see the changes in the preview. 
+You can change either the Editor or the Previewer window size by dragging the splitter up and down. If you'd like to see more about my work check my [portfolio](https://danielcortes.tech).
 
-### Inline code:
-Some inline code: \`<div>little div</div>\`
+## ❔How to mark:
+### Inline code
+\`<p>Some p element</p>\`
 
-### Block code:
+### Block code
 \`\`\`
 // this is multi-line code:
-function printHello() {
+function greetings() {
     console.log("Hello")
 }
 \`\`\`
 
-### List:
-- Fruits:
-    - Watermelon.
-    - Apricot.
+### List
+JS libraries & frameworks
+- Angular.
+- React.
+- Vue.
 
 ### Block quote:
-> "I know that I know nothing"
+> When something is important enough, you do it even if the odds are not in your favor. - Elon Musk.
 
 ### Bold text:
 **A bold text**

@@ -1,13 +1,14 @@
 @import "variables";
 
 .previewer {
+  overflow-y: scroll;
   height: 100%;
   padding: 24px;
   border-radius: 8px;
 
   color: $secondary-color;
   background-color: $primary-color;
-  
+
   font-family: $secondary-font;
   font-size: 16px;
   line-height: 27px;
@@ -27,11 +28,32 @@
     line-height: 33px;
   }
 
+  ul {
+    padding-left: 16px;
+  }
+
+  blockquote {
+    padding: 16px;
+    margin-left: 16px;
+
+    border-left: 4px solid $secondary-color;
+    background-color: darken($primary-color, $amount: 5);
+    font-style: italic;
+
+    p ::before {
+      content: '"';
+      font-size: 32px;
+      font-weight: 700;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
   code {
     padding: 4px 6px;
-    color: $primary-color;
-    background-color: $background-color;
-    
+    border-radius: 8px;
     font-family: $primary-font;
     font-size: 14px;
   }

@@ -1,0 +1,15 @@
+@import "variables";
+
+.editor {
+  overflow-block: scroll;
+  outline: none;
+  border: none;
+  resize: none;
+  height: 100%;
+  background-color: transparent;
+
+  font-size: 16px;
+  line-height: 27px;
+  font-family: $primary-font;
+  color: $primary-color;
+}

@@ -1,7 +1,7 @@
 import React from "react";
-import "../styles/box.scss";
+import "../styles/header.scss";
 
-function DraggableBox({ text }) {
+function Header({ text }) {
   return (
     <div className="box">
       <p>{text}</p>
@@ -9,4 +9,4 @@ function DraggableBox({ text }) {
   );
 }
 
-export default DraggableBox;
+export default Header;

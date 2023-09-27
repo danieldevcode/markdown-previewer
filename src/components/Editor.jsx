@@ -1,12 +1,14 @@
 import React from "react";
-import Box from "./Box";
+import Header from "./Header";
+import "../styles/editor.scss";
 
 function Editor({ code, setCode }) {
   return (
-    <section>
-      <Box text="Editor" />
+    <section className="">
+      <Header text="Editor" />
       <textarea
         id="editor"
+        className="editor"
         placeholder="Start typing here"
         value={code}
         onChange={(e) => setCode(e.target.value)}
