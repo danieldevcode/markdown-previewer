@@ -1,10 +1,10 @@
 import React from "react";
 import "../styles/box.scss";
 
-function DraggableBox() {
+function DraggableBox({ text }) {
   return (
     <div className="box">
-      <p>Code</p>
+      <p>{text}</p>
     </div>
   );
 }
