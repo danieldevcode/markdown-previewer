@@ -1,0 +1,12 @@
+// Desktop view
+@media screen and (min-width: 800px) {
+  .gutter-direction {
+    grid-row: 1/-1;
+    grid-column: 2;
+    cursor: col-resize;
+    height: 100%;
+    width: 14px;
+    align-self: center;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==");
+  }
+}
