@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="main-container">
       <Split
-        rowMinSize={64}
+        rowMinSize={0}
         render={({ getGridProps, getGutterProps }) => (
           <div
             ref={gridRef}
