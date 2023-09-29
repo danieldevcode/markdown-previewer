@@ -1,8 +1,8 @@
 const text = `
 # Markdown previewer
 ## 📄 About
-Type in the editor to see the changes in the preview. 
-You can change either the Editor or the Previewer window size by dragging the splitter up and down. If you'd like to see more about my work check my [portfolio](https://danielcortes.tech).
+Type in the editor to see the changes in the previewer. 
+You can change either the Editor or the Previewer window size by dragging the splitter up and down. If you'd like to see more about my work check out my [portfolio](https://danielcortes.tech).
 
 ## ❔How to mark:
 ### Inline code
