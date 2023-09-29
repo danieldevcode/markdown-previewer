@@ -2,22 +2,20 @@ import React, { useEffect, useRef } from "react";
 import Header from "./Header";
 import "../styles/previewer.scss";
 import { marked } from "marked";
-import hljs from "highlight.js";
+import hljs from "highlight.js/lib/common";
+import javascript from "highlight.js/lib/languages/javascript";
 import "highlight.js/styles/tokyo-night-dark.css";
 import DOMPurify from "dompurify";
 
 function Previewer({ code }) {
   const previewerRef = useRef(null);
 
-  marked.use({
-    gfm: true,
-    breaks: true,
-  });
   useEffect(function onLoad() {
     marked.use({
       gfm: true,
       breaks: true,
     });
+    hljs.registerLanguage("javascript", javascript);
   }, []);
 
   useEffect(
@@ -33,11 +31,7 @@ function Previewer({ code }) {
   return (
     <section className="previewer-section">
       <Header text="Previewer" />
-      <section
-        id="preview"
-        ref={previewerRef}
-        className="previewer"
-      ></section>
+      <section id="preview" ref={previewerRef} className="previewer"></section>
     </section>
   );
 }
