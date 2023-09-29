@@ -3,7 +3,7 @@ import "../styles/header.scss";
 
 function Header({ text }) {
   return (
-    <div className="box">
+    <div className="header">
       <p>{text}</p>
     </div>
   );

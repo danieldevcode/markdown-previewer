@@ -4,7 +4,7 @@ import "../styles/editor.scss";
 
 function Editor({ code, setCode }) {
   return (
-    <section className="">
+    <section>
       <Header text="Editor" />
       <textarea
         id="editor"
