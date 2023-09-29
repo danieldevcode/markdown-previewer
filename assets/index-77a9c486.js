@@ -87,8 +87,8 @@ https://github.com/highlightjs/highlight.js/issues/2277`),I=N,C=b),k===void 0&&(
 `+we),Ne&&(we=At(we,K," "),we=At(we,de," "),we=At(we,_e," ")),m&&$e?m.createHTML(we):we},t.setConfig=function(F){os(F),Fe=!0},t.clearConfig=function(){Jn=null,Fe=!1},t.isValidAttribute=function(F,_,A){Jn||os({});const D=De(F),ue=De(_);return Oc(D,ue,A)},t.addHook=function(F,_){typeof _=="function"&&(P[F]=P[F]||[],$r(P[F],_))},t.removeHook=function(F){if(P[F])return Hd(P[F])},t.removeHooks=function(F){P[F]&&(P[F]=[])},t.removeAllHooks=function(){P={}},t}var Gy=Ug();function Hy({code:e}){const t=vt.useRef(null);return vt.useEffect(function(){ne.use({gfm:!0,breaks:!0}),Fd.registerLanguage("javascript",by)},[]),vt.useEffect(function(){t.current.innerHTML=Gy.sanitize(ne.parse(e)),document.querySelectorAll("code").forEach(r=>{Fd.highlightElement(r)})},[e]),Xe.jsxs("section",{className:"previewer-section",children:[Xe.jsx(cg,{text:"Previewer"}),Xe.jsx("section",{id:"preview",ref:t,className:"previewer"})]})}const Ky=`
 # Markdown previewer
 ## 📄 About
-Type in the editor to see the changes in the preview. 
-You can change either the Editor or the Previewer window size by dragging the splitter up and down. If you'd like to see more about my work check my [portfolio](https://danielcortes.tech).
+Type in the editor to see the changes in the previewer. 
+You can change either the Editor or the Previewer window size by dragging the splitter up and down. If you'd like to see more about my work check out my [portfolio](https://danielcortes.tech).
 
 ## ❔How to mark:
 ### Inline code
